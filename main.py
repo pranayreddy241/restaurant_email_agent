@@ -53,8 +53,16 @@ from datetime import datetime
 EMAIL_ADDRESS = os.environ.get("EMAIL_ADDRESS", "20131a0522@gvpce.ac.in")
 EMAIL_PASSWORD = os.environ.get("EMAIL_PASSWORD", "ratd rrny actg vvar")
 IMAP_SERVER = os.environ.get("IMAP_SERVER", "imap.gmail.com")
+IMAP_PORT   = int(os.environ.get("IMAP_PORT", "993")) 
 SMTP_SERVER = os.environ.get("SMTP_SERVER", "smtp.gmail.com")
 SMTP_PORT = int(os.environ.get("SMTP_PORT", "587"))
+
+def _mask(s): 
+    return "" if not s else f"{s[:2]}…{s[-2:]} (len={len(s)})"
+
+print("[CFG] EMAIL_ADDRESS =", EMAIL_ADDRESS)
+print("[CFG] EMAIL_PASSWORD =", _mask(EMAIL_PASSWORD))
+assert EMAIL_PASSWORD and len(EMAIL_PASSWORD.replace(" ", "")) == 16, "App password must be 16 chars (no spaces)."
 
 ###############################################################################
 # Keyword definitions
