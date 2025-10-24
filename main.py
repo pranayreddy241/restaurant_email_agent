@@ -50,7 +50,7 @@ from datetime import datetime
 #   export SMTP_SERVER="smtp.example.com"
 #   export SMTP_PORT=465
 
-EMAIL_ADDRESS = os.environ.get("EMAIL_ADDRESS", "20131a0522@gvpce.ac.in")
+EMAIL_ADDRESS = os.environ.get("EMAIL_ADDRESS", "pranayreddy241@gmail.com")
 EMAIL_PASSWORD = os.environ.get("EMAIL_PASSWORD", "pranayreddy522")
 IMAP_SERVER = os.environ.get("IMAP_SERVER", "imap.gmail.com")
 SMTP_SERVER = os.environ.get("SMTP_SERVER", "smtp.gmail.com")
