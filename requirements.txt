@@ -1,0 +1,2 @@
+# There are no external Python package dependencies for this project.
+# The script relies only on the Python standard library (imaplib, smtplib, email, re, os).
